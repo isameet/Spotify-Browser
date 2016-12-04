@@ -26,6 +26,10 @@ class HomePage extends React.Component {
   }
 
   hasFilterChanged(nextFilter, currentFilter) {
+
+    // we treat "all", emtpy or null filter as the same - i.e. no filter
+    // hence this check while figuring out if the props have really changed
+
     const equivalent = ['all', '', null];
     if (typeof  nextFilter == 'undefined' || equivalent.indexOf(nextFilter) > -1) {
       nextFilter = '';
@@ -40,9 +44,14 @@ class HomePage extends React.Component {
 
   onSearch(searchQuery = this.props.searchQuery, filter = this.props.filter) {
 
+    // if filter is "all", search-query is empty, url can be made cleaner by omitting "all"
     filter = (filter == 'all' && !searchQuery) ? '' : filter;
+
+    // if filter is empty, but search-query is not, filter needs to be set to "all"
+    // because we went for filter/search-term pattern of URLs instead of query-string
     filter = (filter == '' && searchQuery) ? 'all' : filter;
 
+    // keep adding to browser history for navigation support
     browserHistory.push(`/${filter}/${searchQuery }`.replace('//', '/'));
 
     if (typeof searchQuery === 'undefined' || !searchQuery) {
