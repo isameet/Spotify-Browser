@@ -1,7 +1,3 @@
-**Quick Demo**
-
-http://sameet.surge.sh
-
 **Repository**
 
 https://github.com/isameet/Spotify-Browser
