@@ -18,7 +18,7 @@ class SearchQuery extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.value != this.props.value) {
-      this.setState({ value: nextProps.value, error: !nextProps.value })
+      this.setState({ value: nextProps.value, error: !nextProps.value });
     }
   }
 
