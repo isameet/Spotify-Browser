@@ -1,0 +1,5 @@
+export const BEGIN_AJAX_CALL = 'BEGIN_AJAX_CALL';
+export const ERROR_AJAX_CALL = 'ERROR_AJAX_CALL';
+
+export const SEARCH_SUCCESS = 'SEARCH_SUCCESS';
+export const SEARCH_CLEAR = 'SEARCH_CLEAR';

@@ -1,0 +1,84 @@
+body {
+  background-color: #f5f7f9;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+  color: #777;
+}
+
+.search-icon {
+  position: absolute;
+  top: 1px;
+  right: 30px;
+  font-size: 130%;
+  border-left: 1px solid #ddd;
+  padding-left: 11px;
+  color: #555;
+  line-height: 46px;
+  height: 44px;
+  cursor: pointer;
+}
+
+.search-icon.disabled, .navbar-nav .dropdown.loading {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.search-icon:hover {
+  color: #777;
+}
+
+li.counter {
+  padding: 15px 10px 15px 10px;
+  background-color: white;
+  color: #555;
+  min-width: 80px;
+  text-align: center;
+}
+
+li.counter.loading {
+  font-size: 36px;
+  line-height: 36px;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: Georgia;
+  background: none;
+  cursor: progress;
+}
+
+ul.results {
+  list-style-type: none;
+  padding-left: 0px;
+  padding-top: 25px;
+}
+
+ul.results li {
+  border-bottom: 1px solid #ddd;
+  padding: 8px 0px 8px 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+ul.results li:last-child {
+  border-bottom: 0px;
+}
+
+p.error {
+  color: red;
+  padding-top: 10px;
+}
+
+img.thumb {
+  padding-right: 15px;
+  max-width: 64px;
+}
+
+.form-control:focus {
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  box-shadow: none;
+}
