@@ -33,6 +33,10 @@ const SearchResults = ({results}) => {
                 )
               }
             </ul>
+            {
+              results.albums.total > 10 &&
+              <div className="well text-center">{results.albums.total - 10} more albums ...</div>
+            }
           </div>
         }
 
@@ -51,6 +55,10 @@ const SearchResults = ({results}) => {
                 )
               }
             </ul>
+            {
+              results.artists.total > 10 &&
+              <div className="well text-center">{results.artists.total - 10} more artists ...</div>
+            }
           </div>
         }
 
@@ -69,6 +77,10 @@ const SearchResults = ({results}) => {
                 )
               }
             </ul>
+            {
+              results.playlists.total > 10 &&
+              <div className="well text-center">{results.playlists.total - 10} more playlists ...</div>
+            }
           </div>
         }
 
@@ -87,6 +99,10 @@ const SearchResults = ({results}) => {
                 )
               }
             </ul>
+            {
+              results.tracks.total > 10 &&
+              <div className="well text-center">{results.tracks.total - 10} more tracks ...</div>
+            }
           </div>
         }
 
